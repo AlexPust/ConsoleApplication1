@@ -1,0 +1,6 @@
+E:\VisualStudio15Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+E:\VisualStudio15Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+E:\VisualStudio15Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\VisualStudio15Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\PraktZavd1.csprojResolveAssemblyReference.cache
+E:\VisualStudio15Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+E:\VisualStudio15Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
