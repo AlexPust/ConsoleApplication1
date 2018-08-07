@@ -9,9 +9,10 @@ namespace ConsoleApplication1
     class Student: Person
     {
         private int idStudents;
-        private int number;
-        private int course;
-        private double averageScore;
+        public int IdStudent => idStudents;
+        private int number { get; set; }
+        private int course { get; set; }
+        private double averageScore { get; set; }
         public Student(): base()
         {
             idStudents = 0;
@@ -19,44 +20,67 @@ namespace ConsoleApplication1
             course = 0;
             averageScore = 0;
         }
-        public Student(string _name, string _surname, string _date, int _sex, int _id, int _number,int _course, double _score) : base(_name, _surname, _date, _sex)
+        public Student(string _name, string _surname, DateTime _date, string _sex, int id, int number,int course, double _score) : base(_name, _surname, _date, _sex)
         {
-            idStudents = _id;
-            number = _number;
-            course = _course;
+            idStudents = id;
+            this.number = number;
+            this.course = course;
             averageScore = _score;
         }
-        public void SetIdStudents(int _id)
+        public void StudentChangeInfo()
         {
-            idStudents = _id;
+            bool isSetAllInformationOn = true;
+            while (isSetAllInformationOn)
+            {
+                try
+                {
+                    int id, numb, cours;
+                    double avSore;
+                    PersonChangeInfo();
+
+                    Console.Write("Enter id: ");
+                    id = int.Parse(Console.ReadLine());
+                    if (id < 0) throw new Exception("Wrong info about id!");
+
+                    Console.Write("Enter number of record-book:");
+                    numb = int.Parse(Console.ReadLine());
+                    if (numb < 0) throw new Exception("Wrong info about record-book!");
+
+                    Console.Write("Enter number of course:");
+                    cours = int.Parse(Console.ReadLine());
+                    if (cours < 0) throw new Exception("Wrong info about course!");
+
+                    Console.Write("Enter average score:");
+                    avSore = double.Parse(Console.ReadLine());
+                    if (avSore < 0 || avSore > 5) throw new Exception("Wrong info about average score!");
+
+                    number = numb;
+                    idStudents = id;
+                    course = cours;
+                    averageScore = avSore;
+                    isSetAllInformationOn = false;
+                }
+                catch (Exception exeption)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Ошибка: " + exeption.Message);
+                    Console.WriteLine("Для продолжения нажмите любую клавишу!");
+                    Console.ReadLine();
+                }
+
+            }
         }
-        public void SetNumbre(int _number)
+        public void StudentShowInfo()
         {
-            number = _number;
-        }
-        public void SetCourse(int _course)
-        {
-            course = _course;
-        }
-        public void SetAverageScore(double _score)
-        {
-            averageScore = _score;
-        }
-        public int GetIdStudents()
-        {
-            return idStudents;
-        }
-        public int GetNumbre()
-        {
-            return number;
-        }
-        public int GetCourse()
-        {
-            return course;
-        }
-        public double GetAverageScore()
-        {
-            return averageScore;
+            PersonShowInfo();
+            Console.Write("Student's id: ");
+            Console.WriteLine(idStudents);
+            Console.Write("Number of student's record-book: ");
+            Console.WriteLine(number);
+            Console.Write("Number of course: ");
+            Console.WriteLine(course);
+            Console.Write("Student's average score: ");
+            Console.WriteLine(averageScore);
         }
     }
 }
