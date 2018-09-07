@@ -45,12 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Functional.cs" />
+    <Compile Include="FunctionalPeople.cs" />
+    <Compile Include="FunctionalUniversitet.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="Subject.cs" />
     <Compile Include="Teatcher.cs" />
+    <Compile Include="TFunctional.cs" />
+    <Compile Include="Сurriculum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
